@@ -58,14 +58,10 @@ function Topics() {
         </li>
       </ul>
 
-      <Switch>
-        <Route path={`${match.path}/:topicId`}>
-          <Topic />
-        </Route>
-        <Route path={match.path}>
-          <h3>Please select a topic.</h3>
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path={`${match.path}/:topicId`} element={<Topic />} />
+        <Route path={match.path} element={<h3>Please select a topic.</h3>} />
+      </Routes>
     </div>
   )
 }
