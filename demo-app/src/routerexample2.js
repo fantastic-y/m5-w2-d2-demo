@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
   Link,  
-  useRouteMatch,
+  useNavigate,
   useParams
 } from "react-router-dom";
 
@@ -43,7 +43,7 @@ function Topic() {
 }
 
 function Topics() {
-  let match = useRouteMatch();
+  let match = useNavigate();
 
   return (
     <div>
